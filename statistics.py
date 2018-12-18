@@ -23,7 +23,6 @@ def get_longest_movie(movies):
     return longest_lst
 
 def get_shortest_movie(movies):
-
     shortest_lst = []
     shortest = get_movie_leght(movies[0][4])
     for movie in movies:
@@ -36,9 +35,12 @@ def get_shortest_movie(movies):
             shortest_lst.append(movie[0])
     return shortest_lst
 def get_movie_by_director(movies, director):
-    director = main.get_input(input, title))
+    movies_lst = []
+    director = display.get_input(title)
     for movie in movie:
-        if director in movie:
+        if movie[1] == director:
+            movies_lst.append(movie[0])
+    return movies_lst
 def get_movie_by_star(movies, star):
     pass
 def get_movie_by_year(movies, year):

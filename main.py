@@ -7,7 +7,7 @@ def clear_screen():
     print("\n" * 80)
 
 def main():
-    movies = file_link.read_file
+    movies = file_link.read_file("movie_data.ini")
     options = ["Get Longest Movie", "Get Shortest Movie"]
     while True:
         clear_screen()
@@ -34,34 +34,3 @@ def main():
                 pass
             if option == "0":
                 pass
-
-
-
-if __name__ == "__main__":
-    main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> ab2c247f148b3b85fcac5ba52c9119d07d92deb7
-
-
-
-if __name__ == "__main__":
-    main()
