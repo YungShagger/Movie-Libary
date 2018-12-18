@@ -8,7 +8,7 @@ def get_movie_leght(val):
     raw_numbers = val.replace("min", "").split("h")
     return int(raw_numbers[0]) * 60 + int(raw_numbers[1])
 
-def get_longest_movie(movies)
+def get_longest_movie(movies):
     longest_lst = []
     longest = get_movie_leght(movies[0][4])
     for movie in movies:
@@ -17,7 +17,7 @@ def get_longest_movie(movies)
             longest = x
     
     for movie in movies:
-        if movie[4] == longest:
+        if get_movie_length(movie[4]) == longest:
             longest_lst.append(movie[0])
     return longest_lst
 
