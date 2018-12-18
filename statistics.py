@@ -1,8 +1,9 @@
-def sort_movies_by_stars_number(movies)
-
-def sort_movies_by_release_year(movies)
-
-def sort_movies_by_length(movies)
+def sort_movies_by_stars_number(movies):
+    pass
+def sort_movies_by_release_year(movies):
+    pass
+def sort_movies_by_length(movies):
+    pass
 
 def get_movie_leght(val):
     raw_numbers = val.replace("min", "").split("h")
@@ -21,7 +22,7 @@ def get_longest_movie(movies):
             longest_lst.append(movie[0])
     return longest_lst
 
-def get_shortest_movie(movies)
+def get_shortest_movie(movies):
 
     shortest_lst = []
     shortest = get_movie_leght(movies[0][4])
@@ -38,11 +39,12 @@ def get_shortest_movie(movies)
 
 
 
-def get_movie_by_director(movies, director)
+def get_movie_by_director(movies, director):
+    pass
 
-def get_movie_by_star(movies, star)
-
-def get_movie_by_year(movies, year)
-
-def get_movie_of_highest_revenue(movies)
-
+def get_movie_by_star(movies, star):
+    pass
+def get_movie_by_year(movies, year):
+    pass
+def get_movie_of_highest_revenue(movies):
+    pass
