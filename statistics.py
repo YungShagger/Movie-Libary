@@ -36,9 +36,12 @@ def get_shortest_movie(movies)
     return shortest_lst
 
 
-
-
-def get_movie_by_director(movies, director)
+def get_movie_by_director(movies, director):
+    director = main.get_input(input, title))
+    for movie in movie:
+        if director in movie:
+            
+        
 
 def get_movie_by_star(movies, star)
 
