@@ -35,28 +35,10 @@ def get_shortest_movie(movies):
         if get_movie_length(movie[4]) == shortest:
             shortest_lst.append(movie[0])
     return shortest_lst
-
-
-<<<<<<< HEAD
 def get_movie_by_director(movies, director):
     director = main.get_input(input, title))
     for movie in movie:
         if director in movie:
-            
-        
-
-def get_movie_by_star(movies, star)
-
-def get_movie_by_year(movies, year)
-
-def get_movie_of_highest_revenue(movies)
-=======
-
-
-def get_movie_by_director(movies, director):
-    pass
->>>>>>> ab2c247f148b3b85fcac5ba52c9119d07d92deb7
-
 def get_movie_by_star(movies, star):
     pass
 def get_movie_by_year(movies, year):

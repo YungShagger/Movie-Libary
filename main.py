@@ -3,34 +3,38 @@ import statistics
 import file_link
 import data
 
-def get_input(list_labels, title):
-    list_labels = ['director', 'stars', 'year']
-    user_input = input("Please enter the ", list_label, ":  ")
-    
-    return user_input
-
 def clear_screen():
     print("\n" * 80)
 
-def choose():
-    option = ["Get Longest Movie", "Get Shortest Movie"]
-    while True:
-<<<<<<< HEAD
-        try:
-            pass
 def main():
-    print(get_input(input, title))
-=======
+    movies = file_link.read_file
+    options = ["Get Longest Movie", "Get Shortest Movie"]
+    while True:
         clear_screen()
         print("          MAIN MENU" + "\n" * 2)
-        display.print_options(option)
-        input()
-        break
-        #try:
-        #    pass
+        display.print_options(options)
+        try:
+            inputs = input("Please enter a number: ")
+            option = inputs[0]
+            if option == "1":
+                longest = statistics.get_longest_movie(movies)
+                print("the Longest movie is/are: " + longest)
+                input("Press ENTER to continue!")
+            if option == "2":
+                pass
+            if option == "3":
+                pass
+            if option == "4":
+                pass
+            if option == "5":
+                pass
+            if option == "6":
+                pass
+            if option == "7":
+                pass
+            if option == "0":
+                pass
 
-def main():
-    choose()
 
 
 if __name__ == "__main__":
