@@ -1,6 +1,8 @@
 import display, file_link, statistics, data
 
-
+def get_input(title):
+    title = [director, stars, year]
+    input = input("Enter ")
 
 def clear_screen():
     print("\n" * 80)

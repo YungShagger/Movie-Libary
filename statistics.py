@@ -6,23 +6,36 @@ def sort_movies_by_length(movies)
 
 def get_movie_leght(val):
     raw_numbers = val.replace("min", "").split("h")
-    return raw_numbers[0] * 60 + raw_numbers[1]
+    return int(raw_numbers[0]) * 60 + int(raw_numbers[1])
 
 def get_longest_movie(movies):
-  
+    longest_lst = []
+    longest = get_movie_leght(movies[0][4])
+    for movie in movies:
+        x = get_movie_leght(movie[4])
+        if x > longest:
+            longest = x
+    
+    for movie in movies:
+        if get_movie_length(movie[4]) == longest:
+            longest_lst.append(movie[0])
+    return longest_lst
 
-        
-def get_shortest_movie(movies):
-    shortest = get_movie_lenght(movies[0][4])
-    shortest_list = []
+def get_shortest_movie(movies)
+
+    shortest_lst = []
+    shortest = get_movie_leght(movies[0][4])
     for movie in movies:
         x = get_movie_lenght(movie[4])
         if x < shortest:
             shortest = x
+    
     for movie in movies:
-             if get_movie_lenght(movie[4]) == shortest:
-                lengths_list.append(movie[0])
-    return shortest_list
+        if get_movie_length(movie[4]) == shortest:
+            shortest_lst.append(movie[0])
+    return shortest_lst
+
+
 
 
 def get_movie_by_director(movies, director)
