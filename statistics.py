@@ -8,10 +8,22 @@ def get_movie_leght(val):
     raw_numbers = val.replace("min", "").split("h")
     return raw_numbers[0] * 60 + raw_numbers[1]
 
-def get_longest_movie(movies)
-    for movie in movies:
+def get_longest_movie(movies):
+  
+
         
-def get_shortest_movie(movies)
+def get_shortest_movie(movies):
+    shortest = get_movie_lenght(movies[0][4])
+    shortest_list = []
+    for movie in movies:
+        x = get_movie_lenght(movie[4])
+        if x < shortest:
+            shortest = x
+    for movie in movies:
+             if get_movie_lenght(movie[4]) == shortest:
+                lengths_list.append(movie[0])
+    return shortest_list
+
 
 def get_movie_by_director(movies, director)
 

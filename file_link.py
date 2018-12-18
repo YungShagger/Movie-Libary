@@ -15,9 +15,11 @@ def read_file(filename):
     movies = dict()
     dicti = dict()
     counter = -1
+    movie_names = []
     for element in lines:
         if "[" in element:
             counter += 1
+            movie_names.append(element)
             movies.update({counter: dicti})
             dicti = dict()
         else:
@@ -30,7 +32,7 @@ def read_file(filename):
     movies.pop(0, None)
 
         
-            
+          
                         
 
 
