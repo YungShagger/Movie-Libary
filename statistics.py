@@ -5,42 +5,54 @@ def sort_movies_by_release_year(movies):
 def sort_movies_by_length(movies):
     pass
 
-def get_movie_leght(val):
+def get_movie_length(val):
     raw_numbers = val.replace("min", "").split("h")
-    return int(raw_numbers[0]) * 60 + int(raw_numbers[1])
+    in_minutes = int(raw_numbers[0]) * 60 + int(raw_numbers[1])
+    return in_minutes
 
 def get_longest_movie(movies):
+    longest = 0
+    longest_in_str = ""
+    movies_lst = []
     longest_lst = []
-    longest = get_movie_leght(movies[0][4])
     for movie in movies:
-        x = get_movie_leght(movie[4])
-        if x > longest:
-            longest = x
+        for i, key in enumerate(movie.keys()):
+            if i == 4:
+                length = get_movie_length(movie[key])
+                if length > longest:
+                    longest = length
     
     for movie in movies:
-        if get_movie_length(movie[4]) == longest:
-            longest_lst.append(movie[0])
-    return longest_lst
+        for i, key in enumerate(movie.keys()):
+            if i == 4:
+                if get_movie_length(movie[key]) == longest:
+                    longest_in_str = movie[key]
+
+
+    for movie in movies:
+        for i, key in enumerate(movie.keys()):
+            if i == 0:
+                lst = []
+                lst.append(movie[key])
+            elif i == 4:
+                lst.append(movie[key])
+                movies_lst.append(lst)
+
+
+    for movie in movies_lst:
+        for element in movie:
+            if element == longest_in_str:
+                return movie[0]
+
+
+
+
+   
 
 def get_shortest_movie(movies):
-    shortest_lst = []
-    shortest = get_movie_leght(movies[0][4])
-    for movie in movies:
-        x = get_movie_lenght(movie[4])
-        if x < shortest:
-            shortest = x
-    
-    for movie in movies:
-        if get_movie_length(movie[4]) == shortest:
-            shortest_lst.append(movie[0])
-    return shortest_lst
+    pass
 def get_movie_by_director(movies, director):
-    movies_lst = []
-    director = display.get_input(title)
-    for movie in movie:
-        if movie[1] == director:
-            movies_lst.append(movie[0])
-    return movies_lst
+    pass
 def get_movie_by_star(movies, star):
     pass
 def get_movie_by_year(movies, year):

@@ -5,9 +5,8 @@ import data
 
 def clear_screen():
     print("\n" * 80)
-
 def main():
-    movies = file_link.read_file("movie_data.ini")
+    movies = file_link.file_converter(file_link.read_file("movie_data.ini"))
     options = ["Get Longest Movie", "Get Shortest Movie"]
     while True:
         clear_screen()
@@ -17,20 +16,27 @@ def main():
             inputs = input("Please enter a number: ")
             option = inputs[0]
             if option == "1":
+                clear_screen()
                 longest = statistics.get_longest_movie(movies)
-                print("the Longest movie is/are: " + longest)
+                print("The longest movie is: " + longest + "\n")
                 input("Press ENTER to continue!")
-            if option == "2":
+            elif option == "2":
+                input("Press ENTER to continue!")
+            elif option == "3":
                 pass
-            if option == "3":
+            elif option == "4":
                 pass
-            if option == "4":
+            elif option == "5":
                 pass
-            if option == "5":
+            elif option == "6":
                 pass
-            if option == "6":
+            elif option == "7":
                 pass
-            if option == "7":
-                pass
-            if option == "0":
-                pass
+            elif option == "0":
+                break
+        except:
+            print("hiba")
+
+
+if __name__ == "__main__":
+    main()        

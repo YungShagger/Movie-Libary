@@ -29,33 +29,28 @@ def read_file(filename):
                     #print(sample[0])
                     #input()
                     dicti.update({sample[0]: sample[1]})
+    counter += 1
+    movies.update({counter: dicti})
     movies.pop(0, None)
-
-        
-          
-                        
-
-
-    print(movies)
-    
     return movies
-        
-            
-    
 
-            
+
+def file_converter(file):
+    hoy_lst = []
+    hoy = file
+    for x in hoy.items():
+        for y in x:
+            if type(y) == dict:
+                hoy_lst.append(y)
+    return hoy_lst
+
+
 
 def main():
-    read_file("movie_data.ini")
+    pass
+    
 
-
-
-if __name__ == "__main__":
-    main()
-        
-        
-        
-        
+main()      
         
         
         
